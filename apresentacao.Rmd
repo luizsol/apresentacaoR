@@ -1,0 +1,69 @@
+---
+title: "R, Python, Matlab ou Julia?"
+subtitle: "Um breve comparativo dos diferentes ecossistemas de desenvolvimento no contexto de um fundo de investimentos quantitativo sistemático."
+author: "Luiz Sol"
+date: "`r format(Sys.time(), '%d de %B, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: paper
+    highlight: espresso
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Breve Introdução
+
+Esse artigo tem por por objetivo mostrar os vícios e virtudes dos diferentes ecossistemas de desenvolvimeto no contexto de um fundo de investimentos quantitativo sistemático.
+
+### Público Alvo
+
+Escrevo essa avaliação tendo em mente um *Researcher* que passa boa parte do seu dia adquirindo, organizando, analizando, modelando, visualizando e comunicando um grande volume de dados sobre mercados, à semelhança da imagem abaixo:
+
+![A vida de um gestor](img/loop.png)
+
+Portanto, na minha análise focarei nessas atividades.
+
+### Vieses
+
+É importante deixar bem claro que eu **não sou** um juiz onisciente, justo e imparcial, e por isso acho importante deixar bem claras algumas coisas:
+
+### Minha Experiência
+
+Este que vos escreve já tem alguns anos de experiência em desenvolvimento de software, portanto conceitos como Orientação a Objetos, Classes, Compiladores, Paralelização etc não me são estranhos, o que não é verdade para boa parte do meu público alvo. Sendo assim, ainda que na minha análise eu tente utilizar a perspectiva de um usuário com menos experiência no desenvolvimento de software eu posso acabar falhando nessa mudança de perspectiva.
+
+Além disso, tenho muito mais familiaridade com Python que com MatLab, ainda menos com R e quase nenhuma com o Julia, portanto boa parte do que escreverei aqui terá como fonte relatos anedóticos sorteados pelo Google.
+
+### Meu Ecossistema Favorito
+
+Vou deixar uma coisa muito clara: pra mim só deriam existir 3 linguagens de programação de paradigma funcional: C, Python e Javascript.
+
+Obviamente essa é uma afirmação burra e preconceituosa, mas serve para evidenciar o meu viés ao longo desse artigo.
+
+Me comprometo a, no melhor das minhas capacidades, suprimir ao máximo esse viés durante esse texto, mas ainda assim nada garante que serei feliz nessa tentativa.
+
+## Ecossistemas de desenvolvimento
+
+A essa altura alguns de vocês devem estar estranhando o fato de eu, até esse momento, ter utilizado a expressão *ecossistema de desenvolvimento* ao invés de *linguagem de programação* ou coisas similares, mas o uso dessa expressão é intencional.
+
+A minha intepretação de ecossistema de desenvolvimento inclui não só as linguagens de programação em si, mas também todos os pacotes disponíveis, os ambientes de desenvolvimentos dessas linguagens, a comunidade que desenvolve a linguagem e que dá suporte[^1] à sua utilização, etc.
+
+[^1]: Muitas vezes desenvolvedores optam por utilizar uma linguagem de programação defasada com uma boa comunidade de suporte que o caso contrário, vide a quantidade de perguntas sobre PHP no [Stack Overflow](https://stackoverflow.com/questions/tagged/php).
+
+Abaixo estão descritos os ecossistemas básicos que eu utilizei nessa análise:
+
+| Linguagem | Versão | IDE            | Pacotes/Distribuição |
+|-----------|--------|----------------|----------------|
+| Python    | 3.6.2  | [Sublime Text 3](https://www.sublimetext.com/) | [Anaconda 3.6](https://www.anaconda.com/downloads)   |
+| MatLab    | R2016b | [MatLab](https://www.mathworks.com/products/matlab.html)         |                |
+| R         | 3.2.3  | [RStudio](https://www.rstudio.com/products/rstudio/download/) | [Tidyverse](https://www.tidyverse.org/)      |
+| Julia     | 0.4.5  | [Juno](http://junolab.org/) | [JuliaPro](https://juliacomputing.com/products/juliapro.html)       |
+
+
+
+
