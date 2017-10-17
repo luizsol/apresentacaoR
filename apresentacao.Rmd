@@ -247,9 +247,9 @@ Hello from inside a MatLab script!
 
 Nesse modo o usuário redige um documento que contém texto (incluindo imagens, gráficos e animações) e código executável. Esse modo é (na minha opinião) o mais recomendado para pesquisadores pois permite um grande nível de documentação do código em uma forma que pode ser facilmente apreciada por leigos naquela linguagem.
 
-#### Python
+#### Python e Julia
 
-O projeto [IPython Notebook](https://ipython.org/), que agora foi expandido para o projeto [Jupyter](https://jupyter.org/)[^4], é um software que permite a edição e execução de Notebooks via Navegador.
+O projeto [Jupyter](https://jupyter.org/)[^4], evolução do projeto [IPython Notebook](https://ipython.org/), permite a edição de *Notebooks* de diversas linguages de programação, entre elas Python (a mais famosa) e Julia, via Navegador de Internet.
 
 [^4]: O Jupyter já vem instalado na distribuição Anaconda do Python.
 
@@ -276,6 +276,31 @@ Foi criada uma nova janela em uma sessão existente do navegador.
 
 Na maioria dos casos uma aba no seu navegador padrão se abrirá e será apresentada a interface Web do Jupyter:
 
+![Python em modo interativo](img/jupyter_hello.png)
 
-**$2^o$ passo**: Abrindo o notebook:
+Nos exemplos a seguir utilizaremos o *core* Python 3 para criação, edição e execução dos notebooks.
 
+**$2^o$ passo**: Criando o notebook:
+
+Após criar um novo notebook (no menu *new*) nos deparamos com o editor do Notebook. Nele podemos adicionar textos, imagens e código que será executado in-line, como no exemplo abaixo:
+
+![Python em modo interativo](img/notebook.png)
+
+Esse arquivo, quando exportado (para PDF via LaTeX), tem a seguinte aparência:
+
+![Python em modo interativo](img/pdf.png)
+
+São ***vantagens*** do Jupyter Notebook:
+
+* Possibilidade da homogeneização do ambiente de desenvolvimento Python ou Julia (pacotes, PATH, configurações) e a consequente reproducibilidade de código entre os diversos usuários, uma vez que o webserver (aplicação que permite o acesso do editor via browser e interpetra o código python contido no Notebook) pode ser executado em um servidor de alta performance de maneira centralizada.
+* Maior qualidade da documentação de código com a adição de textos, equações, imagens e gráficos.
+* Simplificação do arquivamento e distribuição de código entre usuários.
+* Funcionamento "out-of-the-box", sendo necessário somente um computador com acesso ao servidor (que pode ou não estar conectado à internet) e um web-browser para ser capaz de utilizar todas as funcionalidades fornecidas pela plataforma.
+
+São ***desvantagens*** do Jupyter Notebook:
+
+* Menor flexibilidade de interação com o código e com o intepetrador (até onde eu saiba, não é possível utilizar o interpretador no modo iterativo ou utilizar outros editores de texto).
+* O código produzido nesse ambiente tende a ser mais desorganizado e, no caso de modelos de trading, a estar menos compatível com o ambiente de produção.
+* O excesso de facilidades e atalhos fornecidos pela ferramenta podem acabar desmotivando os usuários a conhecerem mais profundamente a linguagem de programação.
+
+#### Matlab
